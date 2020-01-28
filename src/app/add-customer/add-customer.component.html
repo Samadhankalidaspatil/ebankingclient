@@ -1,0 +1,150 @@
+
+<div id="main">
+        <div>
+            <div class="col-md-11" align="center">
+            <h2> <b> E-BANKING  WEBSITE </b></h2>
+            
+                <h3>Welcome {{staffOwn.firstName}} {{staffOwn.lastName}}</h3>
+            </div>
+                <div  class="col-md-1"><ul class="nav navbar-nav">
+                        <li>
+                                <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                            </li></ul>
+                    </div> 
+            
+        </div>
+             
+            <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+                <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+                <ul class="nav navbar-nav" style="width: 100%;">
+                    <li class="active">
+                        <a routerLink="/staff-home"> <h5><b> My Details </b></h5> </a>
+                    </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <a routerLink="/customer-details-staff"> <h5> <b>Customer Details </b></h5> </a>
+                    </li>
+                    
+                    <li>
+                            <a routerLink="/loan-details-staff"> <h5><b> Loan Details</b> </h5> </a>
+                    </li>
+                    <li>
+                                <a routerLink="/register"> <h5><b> Add New Customer </b></h5> </a>
+                            </li>
+                            <li>
+                                <a routerLink="/deposit-money"> <h5><b>Deposit Money </b> </h5> </a>
+                            </li>
+                            <li>
+                                <a routerLink="/deduct-money"> <h5><b> Deduct Money </b></h5> </a>
+                            </li> 
+                             <li>
+                                <a routerLink="/add-customer"> <h5> <b>Open New Account </b></h5> </a>
+                            </li> 
+                            <li>
+                             <a routerLink="/cust-account-list-for-staff"> <h5> <b> Bank Accounts </b></h5> </a>
+                            </li>       
+                    </ul>
+                </div>
+                
+            </div>
+            
+    
+    <div class="row" id="row1">
+            <div class="col-md-2">
+                          
+                    <table>
+                        
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <br><br>
+                    <tr>
+                        <td> <b>First Name: {{staffOwn.firstName}} </b></td>
+                    </tr>
+                    <br>
+                    <tr>
+                            <td> <b>Last Name: {{staffOwn.lastName}} </b></td>
+                        </tr>
+                    </table>
+                  
+                </div>
+    
+                <div class="col-md-8" >          
+                            <legend> <h3><b> Open New Account</b> </h3> </legend>
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="id">Enter Customer Id</label> </div>
+                                <div class="col-sm-4"> 
+                                            <input type="text" [(ngModel)]="uid"  placeholder="Enter cust Id" value="{{uid}}">
+                                      </div>
+                                </div>
+                                <br>
+                            <form #myForm="ngForm" (ngSubmit)="addAccount(myForm)" role="form">
+                        <div id="registerDiv">
+            
+
+                            
+
+
+                            <div class="row">
+                                <div class="col-sm-4" style="text-align: end" > <label for="Address">Enter Account Details :</label> </div>
+                                </div>
+                                <br>
+
+                                
+
+                                <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="acc_holder_name">Account Holder Name</label> </div>
+                                    <div class="col-sm-4"> 
+                                            <input type="text" ngModel class="form-control" placeholder="Enter Name" name="acc_holder_name">
+                                          </div>
+                                    </div>
+
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-4"  style="text-align: end"  > <label for="bank_add">Bank Address</label> </div>
+                                        <div class="col-sm-4"> 
+                                                <input type="text" ngModel class="form-control" placeholder="Enter Bank Address" name="bank_add">
+                                              </div>
+                                        </div>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="ifsc">Bank IFSC</label> </div>
+                                    <div class="col-sm-4"> 
+                                            <input type="text" ngModel class="form-control" placeholder="Enter Bank IFSC" name="ifsc">
+                                          </div>
+                                    </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="account_bal">Opening Balance</label> </div>
+                                <div class="col-sm-4"> 
+                                        <input type="text" ngModel class="form-control" placeholder="Balance" name="account_bal">
+                                      </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="opening_date"> Date</label> </div>
+                                    <div class="col-sm-4"> 
+                                            <input type="Date" ngModel class="form-control" placeholder="Enter Bank IFSC" name="opening_date">
+                                          </div>
+                                    </div>
+                                    <br>
+                        
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="accountType">Enter Account Type</label> </div>
+                                <div class="col-sm-4"> 
+                                        <input type="text" ngModel class="form-control" placeholder="Account Type" name="acctype">
+                                      </div>
+                                </div><br><br>
+
+                        <div align="center">
+                            <button type="submit" class="btn btn-primary"> Submit Details </button>
+                        
+                        </div> </div>
+                        </form>
+                    </div></div> 
+                   
+    <div id="end" align="center">
+            <h5> Terms & Conditions</h5> 
+            
+            </div>  
+    
+           

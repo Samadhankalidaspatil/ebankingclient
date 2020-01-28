@@ -1,0 +1,88 @@
+<div class="container" id="login" >
+    <div align="center" style="height: 7px">
+        <h3> Login Here </h3>
+    </div>
+    <form #myForm = "ngForm" (ngSubmit)="SignIn(myForm)">
+        <legend style="font-size: 40px;font-weight: bold; text-align: center; color:aliceblue">Log In</legend>
+        <span *ngIf="service.loginsuc" style="font-size: 16px"  class="label label-danger">Invalid User Name/ Password</span>
+
+        <div class="form-group">
+            <label style="font-size: 20px;" for="email">Email</label>
+            <input ngModel style="border: none;" type="text" class="form-control" name="email" id="email" placeholder="Enter Email" >
+        </div>
+    <br>
+        <div class="form-group">
+            <label style="font-size: 20px;" for="password">Password</label>
+            <input ngModel style="border: none;" type="password" class="form-control" name="password" id="password" placeholder="Enter Password" >
+        </div>
+        <div align="center"> 
+        <button style="font-size: 20px" type="submit" class="btn btn-success" >Log In</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+        
+    </form>
+</div><br><br>
+<div align="center">
+<a routerLink="/forget-password"> <h5> Forget Password ?</h5> </a>
+</div>
+
+
+
+
+<!-- <div>
+    <h1>Login</h1>
+    <form >
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input [(ngModel)]="email" type="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input [(ngModel)]="password" type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <button (click)="SignIn(form)" class="btn btn-success">Login</button>
+            <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+            <button (click)="onSignup()"  class="btn btn-warning pull-right">Signup</button>
+           
+        </div>
+      </div>
+    </div>
+</form>
+</div>
+
+
+ -->
+
+<!-- 
+<body>
+    <div id="div1">
+    
+        <div align="center">
+        <legend>Login here</legend>
+    </div>
+    <div >
+        <div class="form-group">
+            <label for="email">User name</label>
+            <input [(ngModel)]="email" type="email" >
+        </div>
+    
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input [(ngModel)]="password" type="password" >
+        </div>
+    
+        <button (click)="SignIn()" type="submit" class="btn btn-primary">Login</button>
+    </div>
+         <button type="reset" class="btn btn-danger" style="margin-left: 20px;">Clear</button>
+        <a class="btn btn-warning" href="/register" role="button" style="margin-left: 150px;">Sign Up</a>
+        <br> -->
+    
+        <!-- <span class="label label-danger">{{msg}}</span>
+        
+  
+    </div>
+    </body>
+     --> 

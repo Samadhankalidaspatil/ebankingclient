@@ -1,0 +1,103 @@
+
+<div id="main">
+    <div id="userHomediv" align="center">
+    <h2> <b> E-BANKING PORTAL </b></h2>
+    
+      <b>  Welcome..... {{admin.firstName}} {{admin.lastName}} </b>
+    </div>
+    <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+        <div class="col-md-10"  align="center" id="links"   style="background-color: rgb(201, 193, 193); height: 64.9px;">
+        <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="active">
+                        <a style="color: black" routerLink="/admin-home"> <h4> My Details </h4> </a>
+                    </li>
+                    <li>
+                        <a style="color: black" routerLink="/staff-details"> <h4>Staff Details</h4> </a>
+                    </li>
+                    <li>
+                        <a style="color: black" routerLink="/customer-details"> <h4>Customer Details</h4> </a>
+                    </li>
+                    <li>
+                            <a style="color: black" routerLink="/loan-details"> <h4> Loan Details </h4> </a>
+                        </li>
+                        <li>
+                                <a style="color: black" routerLink="/add-staff"> <h4> Add New Staff</h4> </a>
+                            </li>
+            </ul>
+        </div>
+        <div  class="col-md-2">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+        
+        
+        <div class="row" id="row1">
+                
+                    <div>  
+                            <h3> My Details </h3>
+                             <div class="row">
+                                 <br>
+                                     <div class="col-sm-3"  style="text-align: end"  > <label for="fname">First name :</label> </div>
+                                     <div> {{admin.firstName}} </div>
+                                     </div>
+                                     <br>
+                                   
+                     <div class="row">
+                         
+                                 <div class="col-sm-3"  style="text-align: end"  > <label for="lname">Last name :</label> </div>
+                                 <div>  {{admin.lastName}} </div>
+                                 </div>
+                                 <br>
+                     <div class="row">
+                           
+                                 <div class="col-sm-3"  style="text-align: end"  > <label for="mob">Mob No:</label> </div>
+                                 <div>  {{admin.mobileNo}} </div>
+                                 </div>        
+                 <br>
+                 <div class="row">
+                         
+                             <div class="col-sm-3"  style="text-align: end"  > <label for="email">Email :</label> </div>
+                             <div> {{admin.email}} </div>
+                 
+                     </div> 
+                     <br>
+                     <div class="row">
+                             
+                                 <div class="col-sm-3"  style="text-align: end"  > <label for="adhar">Adhar :</label> </div>
+                                 <div> {{admin.aadharNo}} </div>
+                                 </div>   
+                         <br>        
+                    
+                 <div class="row">
+                     
+                         <div class="col-sm-3"  style="text-align: end"  > <label for="gender">Gender :</label> </div>
+                         <div> {{admin.gender}}</div>
+                         </div>   
+                 <br>        
+                 <div class="row">
+                     
+                         <div class="col-sm-3"  style="text-align: end"  > <label for="dob">Date Of Birth :</label> </div>
+                         <div> {{admin.dob}}</div>
+                         </div>   
+                 <br>       
+                 <div class="row">
+                     
+                         <div class="col-sm-3"  style="text-align: end"  > <label for="address">Address:</label> </div>
+                         <div> {{address.houseNo}}, {{address.city}}, {{address.state}}, {{address.pincode}}.</div>
+                         </div>   
+                 <br>
+                     </div>
+       
+          
+        </div>
+        
+        <div id="end" align="center">
+                <h5> Terms & Conditions</h5> 
+                
+                </div>  
+        
+               

@@ -1,0 +1,194 @@
+
+<div id="main">
+    <div>
+        <div class="col-md-11" align="center">
+        <h2> <b> E-BANKING  WEBSITE </b></h2>
+        
+            <h3>Welcome {{staffOwn.firstName}} {{staffOwn.lastName}}</h3>
+        </div>
+            <div  class="col-md-1"><ul class="nav navbar-nav">
+                    <li>
+                            <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                        </li></ul>
+                </div> 
+        
+    </div>
+         
+        <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+            <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+            <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="active">
+                    <a routerLink="/staff-home"> <h5><b> My Details </b></h5> </a>
+                </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                <li>
+                    <a routerLink="/customer-details-staff"> <h5> <b>Customer Details </b></h5> </a>
+                </li>
+                
+                <li>
+                        <a routerLink="/loan-details-staff"> <h5><b> Loan Details</b> </h5> </a>
+                </li>
+                <li>
+                            <a routerLink="/register"> <h5><b> Add New Customer </b></h5> </a>
+                        </li>
+                        <li>
+                            <a routerLink="/deposit-money"> <h5><b>Deposit Money </b> </h5> </a>
+                        </li>
+                        <li>
+                            <a routerLink="/deduct-money"> <h5><b> Deduct Money </b></h5> </a>
+                        </li> 
+                         <li>
+                            <a routerLink="/add-customer"> <h5> <b>Open New Account </b></h5> </a>
+                        </li> 
+                        <li>
+                         <a routerLink="/cust-account-list-for-staff"> <h5> <b> Bank Accounts </b></h5> </a>
+                        </li>       
+                </ul>
+            </div>
+            
+        </div>
+        
+
+<div class="row" id="row1">
+        <div class="col-md-2">
+                      
+                <table>
+                
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <br><br>
+                <tr>
+                    <td> <b>First Name: {{staffOwn.firstName}} </b></td>
+                </tr>
+                <br>
+                <tr>
+                        <td> <b>Last Name: {{staffOwn.lastName}} </b></td>
+                    </tr>
+                </table>
+              
+            </div>
+
+            <div class="col-md-8" id="details">  
+               
+                    <div class="container">
+                       
+                        <legend> <h3><b> Create New Account</b> </h3> </legend>
+                        <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
+                    <div id="registerDiv">
+                        <div class="container">
+                                <div class="row">
+                                  <div class="col-sm-4"  style="text-align: end"  > <label for="firstName">First name</label> </div>
+                                  <div class="col-sm-4"> <input type="text" ngModel class="form-control" placeholder="Enter first name" name="firstName"> </div>
+                                </div>
+                                <br>
+                        <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="lastName">Last Name</label> </div>
+                                <div class="col-sm-4">
+                                     <input type="text" ngModel class="form-control" placeholder="Enter last name" name="lastName">  </div>
+                                </div>
+                                      <br>
+                        <div class="row">
+                            <div class="col-sm-4"  style="text-align: end"  > <label for="mobileNo">Mobile No.</label> </div>
+                            <div class="col-sm-4"> 
+                                    <input type="text" ngModel class="form-control" placeholder="Enter mobile no" name="mobileNo">
+                                  </div>
+                            </div>
+                            <br>
+                        <div class="row">
+                            <div class="col-sm-4"  style="text-align: end"  > <label for="email">Email</label> </div>
+                            <div class="col-sm-4">
+                                    <input type="text" ngModel class="form-control" placeholder="Enter Email" name="email">  </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="dob">Date Of Birth</label> </div>
+                                    <div class="col-sm-4">
+                                            <input type="date" ngModel class="form-control" placeholder="Enter date" name="dob">  </div>
+                                    </div>
+                            <br>
+                            <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="gender">Gender</label> </div>
+                                    <div class="col-sm-4">
+                                            <input type="radio" ngModel name="gender" value="MALE">Male
+                                            <input type="radio" ngModel name="gender" value="FEMALE">Female
+                                        </div>
+                                    </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="aadharNo">Adhar Number</label> </div>
+                                <div class="col-sm-4">
+                                        <input type="text" ngModel class="form-control" placeholder="Enter Aadhar No" name="aadharNo">
+                                      </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="password">Enter Password</label> </div>
+                                    <div class="col-sm-4"> 
+                                            <input type="password" ngModel class="form-control" placeholder="password" name="password">
+                                          </div>
+                                    </div>
+                                    <br><br>
+                            <!-- <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="No">Passport photo</label> </div>
+                                <div class="col-sm-4" style="text-align: end"> 
+                                        <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+                                     </div>        -->
+                        
+                            <br><br>
+
+                            <div class="row">
+                                    <div class="col-sm-4" style="text-align: end" > <label for="Address">Address :</label> </div>
+                                    </div>
+                                   
+                            <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="houseNo">  House No. </label> </div>
+                                    <div class="col-sm-4"> 
+                                            <input type="text" ngModel class="form-control" placeholder="Enter House No" name="houseNo">
+                                          </div>
+                                    </div> 
+                                    <br>
+                           
+                                  
+                                    <div class="row">
+                                        <div class="col-sm-4"  style="text-align: end"  > <label for="city">City</label> </div>
+                                        <div class="col-sm-4"> 
+                                                <input type="text" ngModel class="form-control" placeholder="Enter City" name="city">
+                                              </div>
+                                        </div>
+                                    <br>
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="state">State</label> </div>
+                                <div class="col-sm-4">
+                                     <input type="text" ngModel class="form-control" placeholder="Enter State" name="state">
+                                  </div>
+                                </div>
+                                <br>
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="pincode">Pin Code</label> </div>
+                                <div class="col-sm-4"> 
+                                        <input type="text" ngModel class="form-control" placeholder="Enter Pincode" name="pincode">
+                                      </div>
+                                </div>
+                                <br>
+                           
+                                   
+                                
+                    
+                            <br>
+                            
+                     
+                    </div>
+                    <br>
+                    <div align="center">
+                        <button type="submit" class="btn btn-primary"> Submit Details </button>
+                    
+                    </div>
+                    </form>
+
+
+<div id="end" align="center">
+        <h5> Terms & Conditions</h5> 
+        
+        </div>  
+
+       

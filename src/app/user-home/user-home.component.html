@@ -1,0 +1,152 @@
+
+<div id="main">
+        <div>
+            <div class="col-md-11" align="center">
+            <h2> <b> E-BANKING  WEBSITE </b></h2>
+            
+                <h3>Welcome {{customer.firstName}} {{customer.lastName}}</h3>
+            </div>
+                <div  class="col-md-1"><ul class="nav navbar-nav">
+                        <li>
+                                <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                            </li></ul>
+                    </div> 
+            
+        </div>
+             
+            <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+                <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+                <ul class="nav navbar-nav" style="width: 100%;">
+                    <li class="active">
+                        <a routerLink="/user-home"> <h5><b> My Details </b></h5> </a>
+                    </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <a routerLink="/my-account"> <h5> <b>My Accounts</b></h5> </a>
+                    </li>
+                    
+                    <li>
+                            <a routerLink="/money-transfer"> <h5><b> Payments</b> </h5> </a>
+                    </li>
+                    <li>
+                                <a routerLink="/loan"> <h5><b>Apply For Loan </b></h5> </a>
+                            </li>
+                            <li>
+                                <a routerLink="/loan-list-customer"> <h5><b>Applied Loan</b> </h5> </a>
+                            </li>
+                            <!-- <li>
+                                <a routerLink="/cust-transaction-history"> <h5><b> Transaction History </b></h5> </a>
+                            </li>  --> 
+                                 
+                    </ul>
+                </div>
+                
+            </div>
+            
+    
+    
+    <div class="row">
+            <div class="col-md-2">
+                          
+                    <table>
+                  
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <br><br>
+                    <tr>
+                        <td> <b>First Name: {{customer.firstName}} </b></td>
+                    </tr>
+                    <br>
+                    <tr>
+                            <td> <b>Last Name: {{customer.lastName}} </b></td>
+                        </tr> 
+                    </table>
+                  
+                </div>
+
+
+            <div class="col-md-8">  
+                    <h3> My Details </h3>
+                     <div class="row">
+                         <br>
+                             <div class="col-sm-3"  style="text-align: end"  > <label for="fname">First name :</label> </div>
+                             <div> {{customer.firstName}} </div>
+                             </div>
+                             <br>
+                           
+             <div class="row">
+                 
+                         <div class="col-sm-3"  style="text-align: end"  > <label for="lname">Last name :</label> </div>
+                         <div>  {{customer.lastName}} </div>
+                         </div>
+                         <br>
+             <div class="row">
+                   
+                         <div class="col-sm-3"  style="text-align: end"  > <label for="mob">Mob No:</label> </div>
+                         <div>  {{customer.mobileNo}} </div>
+                         </div>        
+         <br>
+         <div class="row">
+                 
+                     <div class="col-sm-3"  style="text-align: end"  > <label for="email">Email :</label> </div>
+                     <div> {{customer.email}} </div>
+         
+             </div> 
+             <br>
+             <div class="row">
+                     
+                         <div class="col-sm-3"  style="text-align: end"  > <label for="adhar">Adhar :</label> </div>
+                         <div> {{customer.aadharNo}} </div>
+                         </div>   
+                 <br>        
+            
+         <div class="row">
+             
+                 <div class="col-sm-3"  style="text-align: end"  > <label for="gender">Gender :</label> </div>
+                 <div> {{customer.gender}}</div>
+                 </div>   
+         <br>        
+         <div class="row">
+             
+                 <div class="col-sm-3"  style="text-align: end"  > <label for="dob">Date Of Birth :</label> </div>
+                 <div> {{customer.dob}}</div>
+                 </div> 
+            <br>
+            <div class="row">
+             
+                <div class="col-sm-3"  style="text-align: end"  > <label for="dob">Date Of Birth :</label> </div>
+                <div> {{customer.gender}}</div>
+                </div>        
+         <br>       
+         <div class="row">
+             
+                 <div class="col-sm-3"  style="text-align: end"  > <label for="address">Address:</label> </div>
+                 <div> {{address.houseNo}}, {{address.city}}, {{address.state}}, {{address.pincode}}.
+                    
+                 </div>
+                 </div>   
+         <br>
+             </div>
+<div class="col-md-2" id="contact" align="center">
+                  
+        <h4> Contact us <br>
+            Address: Sai ,
+             Behind Big Bazaar, 
+             Sr.No 6/1/1 Next to Amar Apex , 
+             Near Baroakar Bungalow, 
+             Baner, Pune :,
+              Maharashtra 411045
+            
+        </h4>
+
+                   
+            </div>
+  
+</div>
+
+<div id="end" align="center">
+        <h5> Terms & Conditions</h5> 
+        
+        </div>  
+
+       
+         

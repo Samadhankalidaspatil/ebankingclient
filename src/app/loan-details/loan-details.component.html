@@ -1,0 +1,85 @@
+<div id="main">
+    <div id="userHomediv" align="center">
+    <h2> <b> E-BANKING PORTAL </b></h2>
+    
+        Welcome..... {{admin.firstName}} {{admin.lastName}}
+    </div>
+    <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+        <div class="col-md-10"  align="center" id="links"   style="background-color: rgb(201, 193, 193); height: 64.9px;">
+        <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="active">
+                        <a style="color: black" routerLink="/admin-home"> <h4> My Details </h4> </a>
+                    </li>
+                    <li>
+                        <a style="color: black" routerLink="/staff-details"> <h4>Staff Details</h4> </a>
+                    </li>
+                    <li>
+                        <a style="color: black" routerLink="/customer-details"> <h4>Customer Details</h4> </a>
+                    </li>
+                    <li>
+                            <a style="color: black" routerLink="/loan-details"> <h4> Loan Details </h4> </a>
+                        </li>
+                        <li>
+                                <a style="color: black" routerLink="/add-staff"> <h4> Add New Staff</h4> </a>
+                            </li>
+            </ul>
+        </div>
+        <div  class="col-md-2">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+    
+    
+    <div>
+           
+        <table class="table table-responsive" style="border: black">
+            <thead>
+                <th>loan id</th>
+                
+                <th>Loan Type</th>
+                <th>Amount</th>
+                <th>Loan Period</th>
+                <th>Interest Rate</th>
+                <th>Applied Date</th>
+                <th>Occupation</th>
+                <th>Organization</th>
+                <th>Loan Status</th>
+                <th>Cancel</th>
+                <th>  Verify</th>
+            </thead>
+            <br>
+            <tr *ngFor="let loan of loanDetailsAdmin">
+                    <td>{{loan.lid}}</td>
+                    <td>{{loan.loanType}}</td>
+                    <td>{{loan.amount}}</td>
+                    <td>{{loan.loan_period}}</td>
+                    <td>{{loan.interest_rate}}</td>
+                    <td>{{loan.applied_date}}</td>
+                    <td>{{loan.occupation}}</td>
+                    <td>{{loan.organization}}</td>
+                    <td>{{loan.status}}</td>
+                    <!-- <td>
+                        <a  routerLink="/loan-status-update-admin/{{loan.No}}">Verify</a>
+                     </td>   -->
+                    <td>
+                    <button type="button" (click)="reject(loan.lid)"class="btn btn-danger">Reject</button>
+                    </td>
+                    <td>
+                        <button type="button" (click)="approve(loan.lid)" class="btn btn-warning">Approve</button>
+                    </td>
+                    
+                </tr>
+        </table>        
+ 
+           
+    </div>
+</div>
+    <div id="end" align="center">
+            <h5> Terms & Conditions</h5> 
+            
+            </div>  
+    

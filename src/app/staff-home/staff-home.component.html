@@ -1,0 +1,148 @@
+
+<div id="main">
+    <div>
+        <div class="col-md-11" align="center">
+        <h2> <b> E-BANKING  WEBSITE </b></h2>
+        
+            <h3>Welcome {{staffOwn.firstName}} {{staffOwn.lastName}}</h3>
+        </div>
+            <div  class="col-md-1"><ul class="nav navbar-nav">
+                    <li>
+                            <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                        </li></ul>
+                </div> 
+        
+    </div>
+         
+        <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+            <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+            <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="active">
+                    <a routerLink="/staff-home"> <h5><b> My Details </b></h5> </a>
+                </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                <li>
+                    <a routerLink="/customer-details-staff"> <h5> <b>Customer Details </b></h5> </a>
+                </li>
+                
+                <li>
+                        <a routerLink="/loan-details-staff"> <h5><b> Loan Details</b> </h5> </a>
+                </li>
+                <li>
+                            <a routerLink="/register"> <h5><b> Add New Customer </b></h5> </a>
+                        </li>
+                        <li>
+                            <a routerLink="/deposit-money"> <h5><b>Deposit Money </b> </h5> </a>
+                        </li>
+                        <li>
+                            <a routerLink="/deduct-money"> <h5><b> Deduct Money </b></h5> </a>
+                        </li> 
+                         <li>
+                            <a routerLink="/add-customer"> <h5> <b> Open New Account</b></h5> </a>
+                        </li> 
+                        <li>
+                         <a routerLink="/cust-account-list-for-staff"> <h5> <b> Bank Accounts </b></h5> </a>
+                        </li>       
+                </ul>
+            </div>
+            
+        </div>
+        
+        
+        <div class="row" id="row1">
+                <div class="col-md-2" id="img">
+                          
+                        <table>
+                 
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <br><br>
+                        <tr>
+                            <td> <b>First Name: {{staffOwn.firstName}} </b></td>
+                        </tr>
+                        <br>
+                        <tr>
+                                <td> <b>Last Name: {{staffOwn.lastName}} </b></td>
+                            </tr>
+                        </table>
+                      
+                    </div>
+
+
+
+        
+               <div class="col-md-8">  
+                    <legend> <h3><b> My Details</b> </h3> </legend>
+                    <div class="row">
+                        <br>
+                            <div class="col-sm-3"  style="text-align: end"  > <label for="fname"> <h4> <b> First name : </b></h4></label> </div>
+                            <div class="col-sm-3" > <h4> <b>{{staffOwn.firstName}} </b></h4></div>
+                            </div>
+                            <br>
+                          
+            <div class="row">
+                
+                        <div class="col-sm-3"  style="text-align: end"  > <label for="lname"><h4> <b>Last name : </b></h4></label> </div>
+                        <div class="col-sm-3"><h4> <b>  {{staffOwn.lastName}}</b></h4> </div>
+                        </div>
+                        <br>
+            <div class="row">
+                  
+                        <div class="col-sm-3"  style="text-align: end"  > <label for="mob"><h4> <b>Mob No:</b></h4></label> </div>
+                        <div class="col-sm-3"> <h4> <b> {{staffOwn.mobileNo}}</b></h4> </div>
+                        </div>        
+        <br>
+        <div class="row">
+                
+                    <div class="col-sm-3"  style="text-align: end"  > <label for="email"><h4> <b>Email :</b></h4></label> </div>
+                    <div class="col-sm-3"><h4> <b>{{staffOwn.email}}</b></h4> </div>
+        
+            </div> 
+            <br>
+            <div class="row">
+                    
+                        <div class="col-sm-3"  style="text-align: end"  > <label for="adhar"><h4> <b>Adhar :</b></h4></label> </div>
+                        <div class="col-sm-3"><h4> <b> {{staffOwn.aadharNo}} </b></h4></div>
+                        </div>   
+                <br>        
+           
+        <div class="row">
+            
+                <div class="col-sm-3"  style="text-align: end"  > <label for="gender"><h4> <b>Gender :</b></h4></label> </div>
+                <div class="col-sm-3"><h4> <b> {{staffOwn.gender}}</b></h4></div>
+                </div>   
+        <br>        
+        <div class="row">
+            
+                <div class="col-sm-3"  style="text-align: end"  > <label for="dob"><h4> <b>Date Of Birth :</b></h4></label> </div>
+                <div class="col-sm-3"> <h4> <b>{{staffOwn.dob}}</b></h4></div>
+                </div>   
+        <br>       
+        <div class="row">
+            
+                <div class="col-sm-3"  style="text-align: end"  > <label for="address"><h4> <b>Address:</b></h4></label> </div>
+                <div class="col-sm-3"><h4> <b>{{address.houseNo}}, {{address.city}}, {{address.state}}, {{address.pincode}}.</b></h4></div>
+                </div>   
+        <br>
+        </div>
+         <div class="col-md-2" id="contact" align="center">
+                          
+                <h4> Contact us <br>
+                        Contact us 
+                        Address: Sai ,
+                         Behind Big Bazaar, 
+                         Sr.No 6/1/1 Next to Amar Apex , 
+                         Near Baroakar Bungalow, 
+                         Baner, Pune :,
+                          Maharashtra 411045 </h4>
+        
+                           
+                    </div>
+          
+        </div>
+        
+        <div id="end" align="center">
+                <h5> Terms & Conditions</h5> 
+                
+                </div>  
+        
+               

@@ -1,0 +1,21 @@
+
+#login {
+    color: black;
+  margin: auto;
+  width: 35%;
+  height: 30%;
+  border: 2px solid green;
+  border-radius: 0.3cm;
+  
+  background-color: azure
+}
+
+
+#div1 {
+    margin: auto;
+    width: 40%;
+    align-items: center;
+    padding: 10px;
+    text-emphasis-color: red;
+    
+  }

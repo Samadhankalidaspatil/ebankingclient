@@ -1,0 +1,55 @@
+
+#userHomediv
+{
+    
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+    font-stretch: extra-expanded;
+    background-color: rgb(172, 228, 155);
+    
+}
+
+#end
+{
+    width: 100%;
+    height: 35px;
+    background-color: orange;
+}
+
+#row1
+{
+    height: 80%;
+    margin: auto;
+    width: 70%
+}
+
+#details
+{
+    color: black;
+   
+   height: 350px;
+    
+    background-color:floralwhite
+}
+#welcome
+{
+    background-color: orange;
+    font-size: 0.6cm;
+}
+#links
+{
+    color: red;
+    background-color:gray
+}
+
+#img{
+     
+    height: 350px;
+background-color:wheat 
+
+}
+
+contact
+{
+    width: 100%;
+}

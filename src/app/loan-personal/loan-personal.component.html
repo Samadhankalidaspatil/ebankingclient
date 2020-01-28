@@ -1,0 +1,154 @@
+
+<div id="main">
+        <div>
+            <div class="col-md-11" align="center">
+            <h2> <b> E-BANKING  WEBSITE </b></h2>
+            
+                <h3>Welcome {{customer.firstName}} {{customer.lastName}}</h3>
+            </div>
+                <div  class="col-md-1"><ul class="nav navbar-nav">
+                        <li>
+                                <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                            </li></ul>
+                    </div> 
+            
+        </div>
+             
+            <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+                <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+                <ul class="nav navbar-nav" style="width: 100%;">
+                    <li class="active">
+                        <a routerLink="/user-home"> <h5><b> My Details </b></h5> </a>
+                    </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <a routerLink="/my-account"> <h5> <b>My Accounts</b></h5> </a>
+                    </li>
+                    
+                    <li>
+                            <a routerLink="/money-transfer"> <h5><b> Payments</b> </h5> </a>
+                    </li>
+                    <li>
+                                <a routerLink="/loan"> <h5><b>Apply For Loan </b></h5> </a>
+                            </li>
+                            <li>
+                                <a routerLink="/loan-list-customer"> <h5><b>Applied Loan</b> </h5> </a>
+                            </li>
+                                 
+                    </ul>
+                </div>
+                
+            </div>
+            
+    
+    
+    <div class="row">
+            <div class="col-md-2">
+                          
+                    <table>
+                   
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <br><br>
+                    <tr>
+                        <td> <b>First Name: {{customer.firstName}} </b></td>
+                    </tr>
+                    <br>
+                    <tr>
+                            <td> <b>Last Name: {{customer.lastName}} </b></td>
+                        </tr>
+                    </table>
+                  
+                </div>
+                  <div class="col-md-10" id="details">  
+                        <p class="h4 mb-4">Fill below details</p>
+                        <form #myForm="ngForm" (ngSubmit)="addPersonalLoanData(myForm)" role="form">      
+                        
+                           
+                            <table class="table table-hover" style="border: white">
+                                <tbody>
+                                    <tr>
+                                        <td> Enter Account Number</td>
+                                        <td>  <input type="text" ngModel class="form-control" placeholder="Enter Account Number " name="accId" style="width: 300px; height: 30px"></td>
+                                          
+                                    </tr>
+                                    
+                                    <!-- <tr>
+                                        <td>Cusotmer Name</td>  
+                                        <td> <input type="text" ngModel class="form-control" placeholder="Enter Payee Account Number " name="sender_acc_no" style="width: 300px; height: 30px"></td>
+                                       
+                                    </tr> -->
+                                    <tr>
+                                        <td> Loan Amount </td>
+                                        <td>  <input type="text" ngModel class="form-control" placeholder="Enter Amount " name="amount" style="width: 300px; height: 30px"></td>
+                                        
+                                    </tr>
+                         <tr>
+                            <td>Loan Period (in Months)</td>
+                            <td>  <input type="text" ngModel class="form-control" placeholder="Period" name="loan_period" style="width: 300px; height: 30px"> </td>
+                            
+                        </tr> 
+                        
+                         <tr>
+                            <td>Interest rate</td>
+                            <td> <input type="text" ngModel class="form-control" placeholder="rate" name="interest_rate" style="width: 300px; height: 30px"></td>
+                            
+                        </tr> 
+                        <tr>
+                            <td>Applying Date</td>
+                            <td> <input type="date" ngModel class="form-control" name="applied_date" style="width: 300px; height: 30px"></td>
+                            
+                        </tr>
+                        
+                        <tr>
+                                <td>Occupation</td>
+                                <td><input type="text" ngModel class="form-control" placeholder="occupation" name="occupation" style="width: 300px; height: 30px"> </td>
+                                
+                            </tr>
+<tr>
+    <td>Organization</td>
+    <td> <input type="text" ngModel class="form-control" placeholder="Enter Organization " name="organization" style="width: 300px; height: 30px"></td>
+    
+</tr>
+<tr>
+        <td>Income</td>
+        <td> <input type="text" ngModel class="form-control" placeholder="Enter Income " name="income" style="width: 300px; height: 30px"></td>
+        
+    </tr>
+    <!-- <tr>
+            <td>Income Proof</td>
+            <td>  <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control"></td>
+            
+        </tr> -->
+        <!-- <tr>
+                <td> Status</td>
+                <td> <input type="text" ngModel class="form-control" placeholder="Enter Payee Account Number " name="sender_acc_no" style="width: 300px; height: 30px"></td>
+               
+            </tr> -->
+            <tr>
+
+            </tbody>
+        </table>
+        <div align="center">
+                <button type="submit" class="btn btn-primary"> Apply </button>
+                 &nbsp;
+                <button type="button" class="btn btn-danger" >Cancel</button>
+                
+            </div> 
+           
+
+</form>
+
+
+</div>
+
+
+
+
+<br><br><br><br>
+      <div id="end" align="center">
+              <h5> Terms & Conditions</h5> 
+              
+              </div>  
+      
+             
+               

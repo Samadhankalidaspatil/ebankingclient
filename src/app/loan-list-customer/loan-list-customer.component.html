@@ -1,0 +1,107 @@
+
+<div id="main">
+    <div>
+        <div class="col-md-11" align="center">
+        <h2> <b> E-BANKING  WEBSITE </b></h2>
+        
+            <h3>Welcome {{customer.firstName}} {{customer.lastName}}</h3>
+        </div>
+            <div  class="col-md-1"><ul class="nav navbar-nav">
+                    <li>
+                            <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                        </li></ul>
+                </div> 
+        
+    </div>
+         
+        <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+            <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+            <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="active">
+                    <a routerLink="/user-home"> <h5><b> My Details </b></h5> </a>
+                </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                <li>
+                    <a routerLink="/my-account"> <h5> <b>My Accounts</b></h5> </a>
+                </li>
+                
+                <li>
+                        <a routerLink="/money-transfer"> <h5><b> Payments</b> </h5> </a>
+                </li>
+                <li>
+                            <a routerLink="/loan"> <h5><b>Apply For Loan </b></h5> </a>
+                        </li>
+                         <li>
+                            <a routerLink="/loan-list-customer"> <h5><b>Applied Loan</b> </h5> </a>
+                        </li>
+                        <!-- <li>
+                            <a routerLink="/cust-transaction-history"> <h5><b> Transaction History </b></h5> </a>
+                        </li>  -->
+                             
+                </ul>
+            </div>
+            
+        </div>
+        
+
+
+<div class="row">
+        <div class="col-md-2">
+                      
+                <table>
+                
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <br><br>
+               <tr>
+                    <td> <b>First Name: {{customer.firstName}} </b></td>
+                </tr>
+                <br>
+                <tr>
+                        <td> <b>Last Name: {{customer.lastName}} </b></td>
+                    </tr>
+                </table>
+              
+            </div>
+    
+    <div class="row" class="col-md-10">       
+        <div>
+            <legend> <h3><b> Loan Details</b> </h3> </legend>
+                        <table class="table table-responsive" style="border: black">
+                                    <thead>
+                                        <th>loan id</th>
+                                        
+                                        <th>Loan Type</th>
+                                        <th>Amount</th>
+                                        <th>Loan Period</th>
+                                        <th>Interest Rate</th>
+                                        <th>Applied Date</th>
+                                       
+                                        <th>Loan Status</th>
+                                      
+                                    </thead>
+                                    <br>
+                                    <tr *ngFor="let loan of custAccountData">
+                                            <td>{{loan.lid}}</td>
+                                            <td>{{loan.loanType}}</td>
+                                            <td>{{loan.amount}}</td>
+                                            <td>{{loan.loan_period}}</td>
+                                            <td>{{loan.interest_rate}}</td>
+                                            <td>{{loan.applied_date}}</td>
+                                           
+                                            <td>{{loan.status}}</td>
+                                            <!-- <td>
+                                                <a  routerLink="/loan-status-update-staff/{{loan.No}}">Verify</a>
+                                             </td>   -->
+                                           
+                                            
+                                        </tr>
+                                </table>     
+         
+                   
+           
+</div>
+    <div id="end" align="center">
+            <h5> Terms & Conditions</h5> 
+            
+            </div>  
+    

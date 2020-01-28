@@ -1,0 +1,158 @@
+<div>
+    <div id="userHomediv" align="center">
+    <h2> <b> E-BANKING PORTAL </b></h2>
+    
+      <h3>  Welcome.. {{admin.firstName}} {{admin.lastName}}</h3>
+    </div>
+    <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+        <div class="col-md-10"  align="center" id="links"  style="background-color: rgb(201, 193, 193); height: 64.9px;">
+        <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="active">
+                    <a style="color: black" routerLink="/admin-home"> <h4> My Details </h4> </a>
+                </li>
+                <li>
+                    <a style="color: black" routerLink="/staff-details"> <h4>Staff Details</h4> </a>
+                </li>
+                <li>
+                    <a style="color: black" routerLink="/customer-details"> <h4>Customer Details</h4> </a>
+                </li>
+                <li>
+                        <a style="color: black" routerLink="/loan-details"> <h4> Loan Details </h4> </a>
+                    </li>
+                    <li>
+                            <a style="color: black" routerLink="/add-staff"> <h4> Add New Staff</h4> </a>
+                        </li>
+            </ul>
+        </div>
+        <div  class="col-md-2">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+    
+    
+    < <div class="col-md-8" id="details">  
+               
+        <div class="container">
+           
+            <legend> <h3><b> Update Account Details</b> </h3> </legend>
+            <form #myForm="ngForm" (ngSubmit)="OnUpdateCallMe(myForm)" role="form">
+        <div id="registerDiv">
+            <div class="container">
+                    <div class="row">
+                            <div class="col-sm-4"  style="text-align: end"  > <label for="id">Id </label> </div>
+                            <div class="col-sm-4"> <input type="text" class="form-control" placeholder="Enter first name" name="id" [(ngModel)]="emp.id"> </div>
+                          </div>
+                          <br>
+                    <div class="row">
+                      <div class="col-sm-4"  style="text-align: end"  > <label for="firstName">First name</label> </div>
+                      <div class="col-sm-4"> <input type="text" class="form-control" placeholder="Enter first name" name="firstName" [(ngModel)]="emp.firstName"> </div>
+                    </div>
+                    <br>
+            <div class="row">
+                    <div class="col-sm-4"  style="text-align: end"  > <label for="lastName">Last Name</label> </div>
+                    <div class="col-sm-4">
+                         <input type="text"  class="form-control" placeholder="Enter last name" name="lastName" [(ngModel)]="emp.lastName">  </div>
+                    </div>
+                          <br>
+            <div class="row">
+                <div class="col-sm-4"  style="text-align: end"  > <label for="mobileNo">Mobile No.</label> </div>
+                <div class="col-sm-4"> 
+                        <input type="text"class="form-control" placeholder="Enter mobile no" name="mobileNo"  [(ngModel)]="emp.mobileNo" >
+                      </div>
+                </div>
+                <br>
+            <div class="row">
+                <div class="col-sm-4"  style="text-align: end"  > <label for="email">Email</label> </div>
+                <div class="col-sm-4">
+                        <input type="text"  class="form-control" placeholder="Enter Email" name="email" [(ngModel)]="emp.email">  </div>
+                </div>
+                <br>
+                <!-- <div class="row">
+                        <div class="col-sm-4"  style="text-align: end"  > <label for="dob">Date Of Birth</label> </div>
+                        <div class="col-sm-4">
+                                <input type="date"  class="form-control" placeholder="Enter date" name="dob" [(ngModel)]>  </div>
+                        </div>
+                <br> -->
+               
+               <div class="row">
+                    <div class="col-sm-4"  style="text-align: end"  > <label for="aadharNo">Adhar Number</label> </div>
+                    <div class="col-sm-4">
+                            <input type="text"  class="form-control" placeholder="Enter Aadhar No" name="aadharNo" [(ngModel)]="emp.aadharNo">
+                          </div>
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="row">
+                        <div class="col-sm-4"  style="text-align: end"  > <label for="password">Enter Password</label> </div>
+                        <div class="col-sm-4"> 
+                                <input type="text"  class="form-control" placeholder="password" name="password" [(ngModel)]="">
+                              </div>
+                        </div>
+                        <br><br> -->
+                <!-- <div class="row">
+                    <div class="col-sm-4"  style="text-align: end"  > <label for="No">Passport photo</label> </div>
+                    <div class="col-sm-4" style="text-align: end"> 
+                            <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+                         </div>        -->
+            
+                <!-- <br><br>
+
+                <div class="row">
+                        <div class="col-sm-4" style="text-align: end" > <label for="Address">Address :</label> </div>
+                        </div>
+                       
+                <div class="row">
+                        <div class="col-sm-4"  style="text-align: end"  > <label for="houseNo">  House No. </label> </div>
+                        <div class="col-sm-4"> 
+                                <input type="text" ngModel class="form-control" placeholder="Enter House No" name="houseNo">
+                              </div>
+                        </div> 
+                        <br>
+               
+                      
+                        <div class="row">
+                            <div class="col-sm-4"  style="text-align: end"  > <label for="city">City</label> </div>
+                            <div class="col-sm-4"> 
+                                    <input type="text" ngModel class="form-control" placeholder="Enter City" name="city">
+                                  </div>
+                            </div>
+                        <br>
+                <div class="row">
+                    <div class="col-sm-4"  style="text-align: end"  > <label for="state">State</label> </div>
+                    <div class="col-sm-4">
+                         <input type="text" ngModel class="form-control" placeholder="Enter State" name="state">
+                      </div>
+                    </div>
+                    <br>
+                <div class="row">
+                    <div class="col-sm-4"  style="text-align: end"  > <label for="pincode">Pin Code</label> </div>
+                    <div class="col-sm-4"> 
+                            <input type="text" ngModel class="form-control" placeholder="Enter Pincode" name="pincode">
+                          </div>
+                    </div>
+                    <br> -->
+               
+                       
+                    
+        
+                <br>
+                
+         
+        </div>
+        <br>
+        <div align="center">
+            <button type="submit" class="btn btn-primary"> Submit Details </button>
+        
+        </div>
+        </form>
+
+
+<div id="end" align="center">
+<h5> Terms & Conditions</h5> 
+
+</div>  
+

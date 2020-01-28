@@ -1,0 +1,123 @@
+
+<div id="main">
+        <div>
+            <div class="col-md-11" align="center">
+            <h2> <b> E-BANKING  WEBSITE </b></h2>
+            
+                <h3>Welcome {{customer.firstName}} {{customer.lastName}}</h3>
+            </div>
+                <div  class="col-md-1"><ul class="nav navbar-nav">
+                        <li>
+                                <a routerLink="/login"> <h5> <b><i> LOGOUT </i></b></h5> </a>
+                            </li></ul>
+                    </div> 
+            
+        </div>
+             
+            <div  class="row"  style="background-color: rgb(218, 175, 175); height: 64.9px;"  >
+                <div class="col-md-12"  align="center" id="links"  style="background-color: rgb(218, 175, 175); height: 64.9px;">
+                <ul class="nav navbar-nav" style="width: 100%;">
+                    <li class="active">
+                        <a routerLink="/user-home"> <h5><b> My Details </b></h5> </a>
+                    </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <a routerLink="/my-account"> <h5> <b>My Accounts</b></h5> </a>
+                    </li>
+                    
+                    <li>
+                            <a routerLink="/money-transfer"> <h5><b> Payments</b> </h5> </a>
+                    </li>
+                    <li>
+                                <a routerLink="/loan"> <h5><b>Apply For Loan </b></h5> </a>
+                            </li>
+                            <li>
+                                <a routerLink="/loan-list-customer"> <h5><b>Applied Loan</b> </h5> </a>
+                            </li>
+                                 
+                    </ul>
+                </div>
+                
+            </div>
+            
+    
+    
+    <div class="row">
+            <div class="col-md-2">
+                          
+                    <table>
+                    
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <br><br>
+                    <tr>
+                        <td> <b>First Name: {{customer.firstName}} </b></td>
+                    </tr>
+                    <br>
+                    <tr>
+                            <td> <b>Last Name: {{customer.lastName}} </b></td>
+                        </tr>
+                    </table>
+                  
+                </div>
+
+    
+                <div class="col-md-8" id="details">  
+                   
+                        <div class="container">
+                           
+                            <legend> <h3> Transfer Money </h3> </legend>
+                            <form #myForm="ngForm" (ngSubmit)="addTransfer(myForm)" role="form">
+                        <div id="registerDiv">
+                            <div class="container">
+                                    <div class="row">
+                                      <div class="col-sm-4"  style="text-align: end"  > <label for="No">Payee Account Number</label> </div>
+                                      <div class="col-sm-4"> <input type="text" ngModel class="form-control" placeholder="Enter Payee Account Number " name="sender_acc_no"> </div>
+                                    </div>
+                                    <br>
+                            <div class="row">
+                                    <div class="col-sm-4"  style="text-align: end"  > <label for="No"> Receiver Account number</label> </div>
+                                    <div class="col-sm-4">
+                                            <input type="text" ngModel class="form-control" placeholder="Enter Receiver Acc No" name="rec_acc_no">  </div>
+                                    </div>
+                                          <br>
+                                          <div class="row">
+                                                <div class="col-sm-4"  style="text-align: end"  > <label for="No"> Receiver Account type</label> </div>
+                                                <div class="col-sm-4">
+                                                        <input type="text" ngModel class="form-control" placeholder="Enter Receiver Acc No" name="acc_type">  </div>
+                                                </div>
+                                                      <br>               
+                                          
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="No">Amount</label> </div>
+                                <div class="col-sm-4"> 
+                                        <input type="text" ngModel class="form-control" placeholder="Enter Amount" name="amount">
+                                      </div>
+                                </div>
+                                <br>
+                            <div class="row">
+                                <div class="col-sm-4"  style="text-align: end"  > <label for="No">Remark</label> </div>
+                                <div class="col-sm-4">
+                                        <input type="text" ngModel class="form-control" placeholder="Enter Status" name="remark">  </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col-sm-4"  style="text-align: end"  > <label for="No">Date</label> </div>
+                                        <div class="col-sm-4">
+                                                <input type="date" ngModel class="form-control" placeholder="Enter Status" name="tx_date">  </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div align="center">
+                            <button type="submit" class="btn btn-primary"> Submit Details </button>
+                        
+                        </div>
+                        </form>
+    
+    <div id="end" align="center">
+            <h5> Terms & Conditions</h5> 
+            
+            </div>  
+    
+           
+             
